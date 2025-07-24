@@ -1,6 +1,6 @@
 import Image from 'next/image';
-
-export default function Login() {
+'use client';
+export default function SignUp() {
   return (
     <div className="bg-white min-h-screen text-gray-800">
       {/* Top bar */}
@@ -13,35 +13,40 @@ export default function Login() {
       <header className="flex items-center justify-between px-10 py-4 shadow">
         <div className="text-2xl font-bold">SoftWeb</div>
         <nav className="space-x-6">
-          <a href="#" className="hover:underline">Home</a>
+          <a href="page.tsx" className="hover:underline">Home</a>
           <a href="#" className="hover:underline">Contact</a>
           <a href="#" className="hover:underline">About</a>
-          <a href="#" className="font-bold underline">Log In</a>
+          <a href="#" className="font-bold underline">Sign Up</a>
         </nav>
         <div className="text-sm">English ▼</div>
+        <div className="p-10">
+      <h1 className="text-2xl font-bold">Đăng ký tài khoản</h1>
+      {/* Form hoặc nội dung đăng ký ở đây */}
+    </div>
       </header>
 
       {/* Main */}
       <main className="flex flex-col md:flex-row py-10 gap-10 items-start justify-start">
-        {/* Image on left */}
-        <div className="w-ful        git add frontend/src/app/LogIn.jsl md:w-1/2 pl-0">
+        {/* Image sát lề trái */}
+        <div className="w-full md:w-1/2 pl-0">
           <Image
             src="/images/CNC.png"
-            alt="Login Banner"
+            alt="Sign Up Banner"
             width={600}
             height={400}
             className="rounded shadow-lg w-full h-auto ml-0"
           />
         </div>
 
-        {/* Login Form */}
+        {/* Sign Up Form */}
         <div className="w-full md:w-1/2 max-w-md px-6 md:px-0">
-          <h2 className="text-2xl font-bold mb-4">Welcome Back!</h2>
-          <p className="text-gray-600 mb-6">Log in to your account</p>
+          <h2 className="text-2xl font-bold mb-4">Create an account</h2>
+          <p className="text-gray-600 mb-6">Enter your details below</p>
           <form className="space-y-4">
+            <input type="text" placeholder="Name" className="w-full border px-4 py-2 rounded" />
             <input type="text" placeholder="Email or Phone Number" className="w-full border px-4 py-2 rounded" />
             <input type="password" placeholder="Password" className="w-full border px-4 py-2 rounded" />
-            <button type="submit" className="w-full bg-sky-500 text-white py-2 rounded">Log In</button>
+            <button type="submit" className="w-full bg-sky-500 text-white py-2 rounded">Create Account</button>
           </form>
 
           <div className="flex items-center my-4">
@@ -52,11 +57,11 @@ export default function Login() {
 
           <button className="w-full border py-2 rounded flex items-center justify-center gap-2">
             <Image src="/images/go.png" alt="Google" width={20} height={20} />
-            Log in with Google
+            Sign up with Google
           </button>
 
           <p className="text-sm text-center mt-4">
-            Don't have an account? <a href="#" className="text-blue-600">Sign up</a>
+            Already have account? <a href="#" className="text-blue-600">Log in</a>
           </p>
         </div>
       </main>
@@ -68,6 +73,12 @@ export default function Login() {
             <h3 className="font-bold text-lg mb-2">⭐ SoftWeb Pro</h3>
             <p className="text-sm mb-2">A platform dedicated to licensed software and digital solutions.</p>
             <p className="text-sm">We offer products that support businesses and individuals to grow efficiently.</p>
+            <div className="flex gap-4 mt-4 text-xl">
+              <a href="#"><i className="fab fa-facebook" /></a>
+              <a href="#"><i className="fab fa-twitter" /></a>
+              <a href="#"><i className="fab fa-instagram" /></a>
+              <a href="#"><i className="fab fa-linkedin" /></a>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -110,6 +121,7 @@ export default function Login() {
             </div>
           </div>
         </div>
+
         <p className="text-center text-sm text-gray-400 mt-10">© 2025 SoftWeb Pro. All rights reserved.</p>
       </footer>
     </div>
